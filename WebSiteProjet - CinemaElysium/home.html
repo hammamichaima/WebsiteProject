@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>CinemaElysium.com</title>
+  <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="./static/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <link rel="stylesheet" href="static/style-min.css">
+  <link rel="stylesheet" href="cards.css">
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  .poster {
+    box-shadow: 0 0 15px red !important;
+  
+  }
+  #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+#scrollToTopButton:hover,i:hover {
+    background-color: white;
+    color: red;
+  }
+
+  .maincontainer h3 {
+    color: white;
+    text-align: center;
+}
+
+.container {
+  text-align: center;
+}
+#navbarNav.nav-item.nav-link a:hover{
+  color: red;
+
+}
+.nav-link:hover{
+  color: red;
+
+  
+}
+
+#header-nav .nav-link a:hover{
+  color: red;
+}
+
+</style>
+<script>
+  setTimeout(function () {
+    $('.section').fadeToggle();
+  }, 4000);
+  
+
+
+
+
+</script>
+
+<body>
+  <section class="section">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div>
+      <img src="./Images/Logo/TheaterLogo-removebg-preview.png">
+    
+    </div>
+
+  </section>
+
+
+
+  <div class="scroll-bar">
+    
+    <!-- navbar starts -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img class="logo" src="Images/TheaterLogo-removebg-preview.png" alt="" width="30" height="24">
+        </a>
+        <button class="navbar-toggler" style="background-color:#8b0000" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Added ms-auto class to align to right -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="premium.html"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Contact Us</a>
+            </li>
+          </ul>
+          
+          <div class="dropdown" style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+              Genres
+            </button>
+            <div class="dropdown-content" style="color: white;">
+            
+              <a href="crime.html">Crime</a>
+              <a href="drama.html">Drama</a>
+              <a href="horror.html">Horror</a>
+              <a href="anime.html">Anime</a>
+            </div>
+          </div>
+        
+          <div style="inline-block; padding-left: 15px;">
+          <form id="searchForm" class="d-flex">
+            <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger" type="submit">Search</button>
+          </form>
+        </div>
+       
+        <div style="display: inline-block; padding-left: 15px;">
+          <button type="button" class="btn btn-light" onclick="logout()" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Logout</button>
+        </div>
+       
+       
+        <!-- Genre dropdown starts-->
+     
+
+            
+                
+                  
+               <div>
+              </div>
+            </div>
+          </nav>
+  
+                
+        <!-- navbar ends -->
+
+
+    <marquee>Welcome To <i>CinemaElysium</i>.com<sup>&reg;</sup></marquee>
+    <label class="online">Stream Best Movies And Series Of All Time Now!</label>
+    
+
+
+    <div class="buddy">
+
+      <div class="slider">
+        <div class="slide_track">
+          <div class="slide">
+            <img src="./Images/goodwillhunting.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./Images/deadpoetssociety.jpg" alt="" />
+          </div>
+        
+          
+          <div class="slide">
+            <img src="./Images/taxi.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/the-wire.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/the-shawshank-redemption.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/whentheyseeus.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/grave-of-the-fireflies.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/requiem-for-a-dream.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/true-detectives.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/fight.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/bcs2.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./Images/leftovers.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./Images/mr-robot.jpg" alt="" />
+          </div>
+       
+          <div class="slide">
+            <img src="./Images/prisonners.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/children-of-heaven.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/moonlight.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/sopranos.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/chernobyl.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/wolf.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/pursuit.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/madmen.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./Images/goodfellas.jpg" alt="" />
+          </div>
+
+          <div class="slide">
+            <img src="./Images/flew.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/memento.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/beautifulmind.jpg" alt="" />
+          </div>
+          <div class="slide">
+            <img src="./Images/peaky.jpg" alt="" />
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+    </div>
+    
+
+        
+    <div class="maincontainer">
+
+      <h2>Popular</h2>
+      <hr>
+      <div class="container">
+          <div id="movies" class="row"></div>
+      </div>
+      
+      <div class="container" id="Movies">
+        <h3></h3>
+        <hr>
+         
+        
+        
+        
+        
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/inception.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>Inception</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2010</button>
+                  <button class="btn_i b2_i"  title="Minutes" style="color:white">2h42m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.8</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Cobb steals information from his targets by entering their dreams. Saito offers to wipe clean Cobb's criminal history as payment for performing an inception on his sick competitor's son.</p>
+
+                  <!--<form action="https://youtu.be/YoHD9XEInc0&t=17s"> -->
+                      
+                      <button class="trailer_i" type="submit" value="" onclick="openWin()">▶Trailer</button>
+                        <script type="text/javascript">
+                          function openWin(){
+                            window.open("https://youtu.be/YoHD9XEInc0&t=17s","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                          }
+                        </script>
+                 <!-- </form> -->
+                  <br>
+                  <br>
+                  <button class="btn_i b4_i" onclick="openMovieWin()">▶Play</button>
+                  <script type="text/javascript">
+                    function openMovieWin(){
+                      window.open("https://youtu.be/wcS_awzEYuk","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                    }
+                  </script>
+              </div>
+                <div class="flim">
+                    <b>Inception</b>
+                    <br>
+                    IMDb - 8.8
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/dark knight.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1 style="font-size: 30px;">The Dark Knight</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2008</button>
+                  <button class="btn_i b2_i"  title="Minutes" style="color:white">2h32m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.0</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">After Gordon, Dent and Batman begin an assault on Gotham's organised crime, the mobs hire the Joker, a psychopathic criminal mastermind who offers to kill Batman and bring the city to its knees.</p>
+
+                  
+                    <button class="trailer_i" type="submit" value="" onclick="openWin1()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin1(){
+                        window.open("https://youtu.be/LDG9bisJEaI","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script>
+                  <br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>The Dark Knight</b>
+                    <br>
+                    IMDb - 9.0
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/Parasite.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>Parasite</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+                  <button class="btn_i b2_i"  title="Minutes" style="color:white">2h12m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">The struggling Kim family sees an opportunity when the son starts working for the wealthy Park family. Soon, all of them find a way to work within the same household and start living a parasitic life.</p>
+
+                    <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin2(){
+                        window.open("https://youtu.be/SEUXfv87Wpk","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>Parasite</b>
+                    <br>
+                    IMDb - 8.6
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/interstellar.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>Interstellar</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2014</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">2h49m</button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">When Earth becomes uninhabitable in the future, a farmer and ex-NASA pilot, Joseph Cooper, is tasked to pilot a spacecraft, along with a team of researchers, to find a new planet for humans.</p>
+
+                    <button class="trailer_i" type="submit" value="" onclick="openWin3()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin3(){
+                        window.open("https://www.youtube.com/watch?v=zSWdZVtXT7E","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>Interstellar</b>
+                    <br>
+                    IMDb - 8.6
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/got.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>Game Of Thrones</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2011</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">8<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.2</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Nine noble families fight for control over the lands of Westeros, while an ancient enemy returns after being dormant for millennia.</p>
+
+                 
+                    <button class="trailer_i" type="submit" value="" onclick="openWin4()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin4(){
+                        window.open("https://www.youtube.com/watch?v=KPLWWIOCOOQ","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+                 
+              </div>
+                <div class="flim">
+                    <b>Game Of Thrones</b>
+                    <br>
+                    IMDb - 9.2
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/weownthiscity.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>We Own This City</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2022</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">1<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">7.6</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Thomas Anderson, a computer programmer, is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix.</p>
+
+                 
+                    <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin5(){
+                        window.open("https://www.youtube.com/watch?v=Ig9BcW7gXvE","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>We Own This City</b>
+                    <br>
+                    IMDb - 7.6
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/joker.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>Joker</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+                  <button class="btn_i b2_i"  title="Minutes" style="color:white">2h2m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.4</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Arthur Fleck, a party clown, leads an impoverished life with his ailing mother. However, when society shuns him and brands him as a freak, he decides to embrace the life of crime and chaos.</p>
+
+                    <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin6(){
+                        window.open("https://youtu.be/ueBcdUPzweY","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>Joker</b>
+                    <br>
+                    IMDb - 8.4
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/lucifer.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>Lucifer</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2016</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">6<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.1</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Lucifer Morningstar has decided he's had enough of being the dutiful servant in Hell and decides to spend some time on Earth to better understand humanity. He settles in Los Angeles - the City of Angels.</p>
+
+                    <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin7(){
+                        window.open("https://www.youtube.com/watch?v=X4bF_quwNtw","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>Lucifer</b>
+                    <br>
+                    IMDb - 8.1
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/goodfellas.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>GoodFellas</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">1990</button>
+                  <button class="btn_i b2_i"  title="Minutes" style="color:white">2h28m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.7</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Young Henry Hill, with his friends Jimmy and Tommy, begins the climb from being a petty criminal to a gangster on the mean streets of New York.</p>
+
+                    <button class="trailer_i" type="submit" value="" onclick="openWin8()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin8(){
+                        window.open("https://www.imdb.com/video/vi2673654553?▶PlaylistId=tt0099685&ref_=tt_ov_vi","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>GoodFellas</b>
+                    <br>
+                    IMDb - 8.7
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/the shawshank.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1 style="font-size: 30px;">The Shawshank Redemption</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">1994</button>
+                  <button class="btn_i b2_i"  title="Minutes" style="color:white">2h22m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.3</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i" style="margin-top: -20px;">Andy Dufresne, a successful banker, is arrested for the murders of his wife and her lover, and is sentenced to life imprisonment at the Shawshank prison. He becomes the most unconventional prisoner.</p>
+
+                    <button class="trailer_i" type="submit" value="" onclick="openWin9()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin9(){
+                        window.open("https://youtu.be/6hB3S9bIaco","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i" onclick="openMovieWin9()">▶Play</button>
+                  
+                  <script type="text/javascript">
+                    function openMovieWin9(){
+                      window.open("https://youtu.be/MoLEo-HUGOk","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                    }
+                  </script>
+              </div>
+                <div class="flim">
+                    <b>The Shawshank Redemption</b>
+                    <br>
+                    IMDb - 9.3
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/green.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>The Green Mile</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">1999</button>
+                  <button class="btn_i b2_i"  title="Minutes" style="color:white">3h9m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Paul, the head guard of a prison, meets an inmate, John, an African American who is accused of murdering two girls. His life changes drastically when he discovers that John has a special gift.</p>
+                      
+                    <button class="trailer_i" type="submit" value="" onclick="openWin10()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin10(){
+                        window.open("https://youtu.be/Ki4haFrqSrw","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>The Green Mile</b>
+                    <br>
+                    IMDb - 8.6
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/punisher.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>The Punisher</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2017</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">3<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.5</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">After his revenge on those who murdered his family, aimless Marine veteran Frank Castle finds a new meaning in life as a vigilante known as "The Punisher".</p>
+
+                    <button class="trailer_i" type="submit" value="" onclick="openWin11()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin11(){
+                        window.open("https://www.youtube.com/watch?v=s4QV6OZdmWY","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i" onclick="openMovieWin11()">▶Play</button>
+                  
+                
+              </div>
+                <div class="flim">
+                    <b>The Punisher</b>
+                    <br>
+                    IMDb - 8.5
+                </div>
+            </div>
+          </div>
+        </div> 
+
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/wd.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>The Walking Dead</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2010</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">11<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.1</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">Sheriff Deputy Rick Grimes wakes up from a coma to learn the world is in ruins and must lead a group of survivors to stay alive.</p>
+
+                 
+                    <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin5(){
+                        window.open("https://www.youtube.com/watch?v=sfAc2U20uyg","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>The Walking Dead</b>
+                    <br>
+                    IMDb - 8.1
+                </div>
+            </div>
+          </div>
+        </div> 
+
+
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/peaky.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>Peaky Blinders</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">2013</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">6<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.8</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">A gangster family epic set in 1900s England, centering on a gang who sew razor blades in the peaks of their caps, and their fierce boss Tommy Shelby.</p>
+
+                 
+                    <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin5(){
+                        window.open("https://www.youtube.com/watch?v=oVzVdvGIC7U","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>Peaky Blinders</b>
+                    <br>
+                    IMDb - 8.8
+                </div>
+            </div>
+          </div>
+        </div> 
+
+        
+        <div class="poster">
+          <div class="flip-card_i">
+            <div class="flip-card-inner_i">
+              <div class="flip-card-front_i">
+                  <img src="./Images/oz.jpg" alt="Avatar" style="width:250px;height:360px;">
+              </div>
+              <div class="flip-card-back_i">
+                <h1>OZ</h1>
+                  <button class="btn_i b3_i"  title="Year" style="color:white">1997</button>
+                  <button class="btn_i b2_i"  title="Seasons" style="color:white">6<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.7</button>
+                </span>
+                <br />
+                <br />
+              </p>
+
+                <p class="para_i">A series chronicling the daily activities of an unusual prison facility and its criminal inhabitants.</p>
+
+                 
+                    <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                    <script type="text/javascript">
+                      function openWin5(){
+                        window.open("https://www.youtube.com/watch?v=h9_7kF-ctEo","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                      }
+                    </script><br><br>
+                  <button class="btn_i b4_i">▶Play</button>
+
+              </div>
+                <div class="flim">
+                    <b>OZ</b>
+                    <br>
+                    IMDb - 8.7
+                </div>
+            </div>
+          </div>
+        </div> 
+ 
+        
+        
+      </div>
+
+
+  
+    <!-------------------------------Footer-------------------------------->
+    <footer class="footer">
+      <hr class="footer-hr">
+      <div class="footer-content">
+        <div class="footer-left">
+          <a href="home.html"><img class="footer-logo" src="Images/TheaterLogo.png" alt="" width="30"
+              height="24"></a>
+          <p class="footer-bottom-tagline">Watch! Chill! Repeat!</p>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Follow Us</h2>
+          <ul class="footer-middle-list icons">
+            <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                class="fab fa-facebook-f facebook" style="color:red"></i></a>
+            <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i
+                class="fab fa-twitter twitter" style="color:red"></i></a>
+            <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i
+                class="fab fa-linkedin linkedin" style="color:red"></i></a>
+            <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i
+                class="fab fa-instagram instagram" style="color:red"></i></a>
+            
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Services</h2>
+          <ul class="footer-middle-list">
+            <li class="footer-middle-list-item"><a href="home.html">Enjoy Latest Movies</a> </li>
+            
+            <li class="footer-middle-list-item"><a href="premium.html">Get Premium Subscription</a> </li>
+            <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+          </ul>
+        </div>
+       <div class="footer-middle">
+                <h2 class="footer-heading">Try Our App</h2>
+                <ul class="footer-middle-list icons">
+                    <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:red"></i></a>
+                    <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color:red"></i></a>
+                </ul>
+            </div>
+        <div class="footer-right">
+          <p class="footer-links">
+          <h2 class="footer-heading">Contact Us</h2>
+          <p class="footer-bottom-tagline">Feel free to contact us.</p>
+          <a class="footer-contact-button" href="contactus.html">Contact</a>
+          </p>
+        </div>
+      </div>
+      <hr class="footer-hr">
+      <div class="footer-copyright">
+        <p>Copyright &copy; and &reg; Since
+          <script>
+            document.write(new Date().getFullYear())
+          </script> CinemaElysium.com 
+        </p>
+      </div>
+    </footer>
+
+    <!----------------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+    <script>
+      $(document).ready(function () {
+        var scrollTopButton = document.getElementById("scrollToTopButton");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            scrollTopButton.style.display = "block";
+          } else {
+            scrollTopButton.style.display = "none";
+          }
+        }
+
+        $("#scrollToTopButton").click(function () {
+          $('html ,body').animate({ scrollTop: 0 }, 800)
+        });
+      });
+    </script>
+
+    <!-- footer scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+      jQuery('#waterdrop').raindrops({
+        color: '#292c2f',
+        canvasHeight: 150,
+        density: 0.1,
+        frequency: 20
+      });
+    </script>
+    <script>
+      function logout(){
+        window.location.replace("login.html");
+      }
+      </script>
+    <!-- bootsstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>

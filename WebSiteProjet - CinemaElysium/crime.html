@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CinemaElysium.com</title>
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+
+</head>
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+  #scrollToTopButton{
+position:fixed;
+bottom: 40px;
+right: 25px;
+font-size: 25px;
+z-index: 99;
+width: 50px;
+height: 50px;
+background-color:red;
+color:black;
+border: none;
+cursor: pointer;
+outline: none;
+padding: 6px;
+border-radius: 50%;
+}
+#scrollToTopButton:hover, i:hover {
+background-color:white;
+color:red;
+}
+#nav:hover
+{
+  background-color:#e60e23!important;
+
+}
+#header-nav .nav-link {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+}
+    @media only screen and (max-width: 1400px){
+  #header-nav .nav-link {
+    color: white;
+    font-size: 18px;
+    margin-left: 18px;
+  }
+  #searchText{
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 1133px) and (max-width: 1275px) {
+  #header-nav .nav-link {
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+  } 
+}
+@media only screen and (min-width: 1035px) and (max-width: 1132px) {
+  #header-nav .nav-link {
+    color: white;
+    font-size: 15px;
+    margin-left: 10px;
+  } 
+  #searchText{
+    width: 120px;
+  }
+  #submitBtn{
+    width: 60px;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 993px) and (max-width: 1034px) {
+  #header-nav .nav-link {
+    color: white;
+    font-size: 14px;
+    margin-left: 10px;
+  } 
+
+#searchText{
+  width: 100px;
+}
+#submitBtn{
+  width: 50px;
+  display: flex;
+  justify-content: center;
+}
+}
+
+.container {
+  text-align: center;
+}
+</style>
+<body>
+  <div class="scroll-bar">
+    
+    <!-- navbar starts -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home.html">
+          <img class="logo" src="Images/TheaterLogo.png" alt="" width="30" height="24">
+        </a>
+        <button class="navbar-toggler" style="background-color:#8b0000" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0"> <!-- Added ms-auto class to align to right -->
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="premium.html"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html"  onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Contact Us</a>
+            </li>
+          </ul>
+          
+          <div class="dropdown" style="position: relative; display: inline-block; padding-top: 5px; padding-left: 15px;">
+            <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+              Genres
+            </button>
+            <div class="dropdown-content" style="color: white;">
+         
+              <a href="crime.html">Crime</a>
+              <a href="drama.html">Drama</a>
+              <a href="horror.html">Horror</a>
+              <a href="anime.html">Anime</a>
+            </div>
+          </div>
+        
+          <div style="inline-block; padding-left: 15px;">
+          <form id="searchForm" class="d-flex">
+            <input class="form-control me-2" type="text" id="searchText" placeholder="Search" aria-label="Search">
+            <button class="btn btn-danger" type="submit">Search</button>
+          </form>
+        </div>
+       
+        <div style="display: inline-block; padding-left: 15px;">
+          <button type="button" class="btn btn-light" onclick="logout()" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Logout</button>
+        </div>
+       
+       
+        <!-- Genre dropdown starts-->
+     
+
+            
+                
+                  
+               <div>
+              </div>
+            </div>
+          </nav>
+  
+    
+            <!-- navbar ends -->
+
+        <div class="maincontainer">
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+            <hr>
+            <h2>Crime</h2>
+            <hr>
+            <div class="container" id="Movies">
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/whentheyseeus.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>When They See Us</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">2019</button>
+                        <button class="btn_i b2_i"  title="Seasons" style="color:white">1</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.9</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">Five teens from Harlem become trapped in a nightmare when they're falsely accused of a brutal attack in Central Park. Based on the true story,</p>
+
+                          <button class="trailer_i" type="submit" value="" onclick="openWin()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin(){
+                              window.open("https://www.youtube.com/watch?v=VHbOt2M8md0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>When They See Us</b>
+                          <br>
+                          IMDb - 8.9
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/sopranos.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Sopranos</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">1999</button>
+                        <button class="btn_i b2_i"  title="Seasons" style="color:white">6</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.2</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">An innovative look at the life of fictional Mafia Capo Tony Soprano, this serial is presented largely first person, but additional perspective is conveyed by the intimate conversations Tony has with his psychotherapist. We see Tony at work, at home, and in therapy.</p>
+
+   
+                          <button class="trailer_i" type="submit" value="" onclick="openWin8()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin8(){
+                              window.open("https://www.youtube.com/watch?v=KMx4iFcozK0","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+                        
+                    </div>
+                      <div class="flim">
+                          <b>Sopranos</b>
+                          <br>
+                          IMDb - 9.2
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+              
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/the-wire.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>The Wire</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">2002</button>
+                        <button class="btn_i b2_i"  title="Seasons" style="color:white">5</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.3</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">The Baltimore drug scene, as seen through the eyes of drug dealers and law enforcement.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin2(){
+                              window.open("https://www.youtube.com/watch?v=1S5khOZ1wBs","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>The Wire</b>
+                          <br>
+                          IMDb - 9.3
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/breaking-bad.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1 style="font-size: 30px;">Breaking Bad</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">2008</button>
+                        <button class="btn_i b2_i"  title="Seasons" style="color:white">5</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.5</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">Walter White, a chemistry teacher, discovers that he has cancer and decides to get into the meth-making business to repay his medical debts. His priorities begin to change when he partners with Jesse</p>
+
+                      
+                          <button class="trailer_i" type="submit" value="" onclick="openWin3()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin3(){
+                              window.open("https://youtu.be/HhesaQXLuRY","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Breaking Bad</b>
+                          <br>
+                          IMDb - 9.5
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/taxi-driver.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Taxi Driver</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">1976</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">1h54m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.2</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">A mentally unstable veteran works as a nighttime taxi driver in New York City, where the perceived decadence and sleaze fuels his urge for violent action.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin6(){
+                              window.open("https://www.youtube.com/watch?v=T5IligQP7Fo","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Taxi Driver</b>
+                          <br>
+                          IMDb - 8.2
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+             
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/bcs.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Better Call Saul</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">2015</button>
+                        <button class="btn_i b2_i"  title="Seasons" style="color:white">6</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.9</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">The trials and tribulations of criminal lawyer Jimmy McGill in the years leading up to his fateful run-in with Walter White and Jesse Pinkman.</p>
+
+                      
+                          <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin5(){
+                              window.open("https://www.youtube.com/watch?v=HN4oydykJFc","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Better Call Saul</b>
+                          <br>
+                          IMDb - 8.9
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/seven.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Seven</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">1995</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">2h7m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">Two detectives, a rookie and a veteran, hunt a serial killer who uses the seven deadly sins as his motives.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin6(){
+                              window.open("https://www.youtube.com/watch?v=BdJKm16Co6M","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Seven</b>
+                          <br>
+                          IMDb - 8.6
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/nightcrawler.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Nightcrawler</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">2014</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">1h57m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">7.8</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">When Louis Bloom, a con man desperate for work, muscles into the world of L.A. crime journalism, he blurs the line between observer and participant to become the star of his own story.</p>
+
+                          <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin7(){
+                              window.open("https://www.youtube.com/watch?v=u1uP_8VJkDQ","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Nightcrawler</b>
+                          <br>
+                          IMDb - 7.8
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+             
+
+              
+
+
+
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/the-usual-suspects.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>The Usual Suspects</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">1995</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">1h46m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.5</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat, which began when five criminals met at a seemingly random police lineup.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin6(){
+                              window.open("https://www.youtube.com/watch?v=oiXdPolca5w","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>The Usual Suspects</b>
+                          <br>
+                          IMDb - 8.5
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/12.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>12 Angry Men</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">1957</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">1h36m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">9.0</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.</p>
+
+                       
+                          <button class="trailer_i" type="submit" value="" onclick="openWin1()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin1(){
+                              window.open("https://www.youtube.com/watch?v=_13J_9B5jEk","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>12 Angry Men</b>
+                          <br>
+                          IMDb - 9.0
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/prisonners.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Prisonners</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">2013</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">2h33m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.1</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">When Keller Dover's daughter and her friend go missing, he takes matters into his own hands as the police pursue multiple leads and the pressure mounts.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin4()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin4(){
+                              window.open("https://www.youtube.com/watch?v=bpXfcTF6iVk","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Prisonners</b>
+                          <br>
+                          IMDb - 8.1
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/scarface.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Scarface</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">1983</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">2h50m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.3</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">After getting a green card in exchange for assassinating a Cuban government official, Tony Montana (Al Pacino) stakes a claim on the drug trade in Miami.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin6(){
+                              window.open("https://www.youtube.com/watch?v=7pQQHnqBa2E","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Scarface</b>
+                          <br>
+                          IMDb - 8.3
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/narcos.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>Narcos</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">2015</button>
+                        <button class="btn_i b2_i"  title="Seasons" style="color:white">3</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.8</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">A chronicled look at the criminal exploits of Colombian drug lord Pablo Escobar, as well as the many other drug kingpins who plagued the country through the years.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin6(){
+                              window.open("https://www.youtube.com/watch?v=xl8zdCY-abw","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>Narcos</b>
+                          <br>
+                          IMDb - 8.8
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="poster">
+                <div class="flip-card_i">
+                  <div class="flip-card-inner_i">
+                    <div class="flip-card-front_i">
+                        <img src="./Images/american.jpg" alt="Avatar" style="width:250px;height:360px;">
+                    </div>
+                    <div class="flip-card-back_i">
+                      <h1>American History X</h1>
+                        <button class="btn_i b3_i"  title="Year" style="color:white">1998</button>
+                        <button class="btn_i b2_i"  title="Minutes" style="color:white">1h59m</button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.5</button>
+                      </span>
+                      <br />
+                      <br />
+                    </p>
+
+                      <p class="para_i">A former neo-nazi skinhead tries to prevent his younger brother from going down the same wrong path that he did.</p>
+
+                     
+                          <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                          <script type="text/javascript">
+                            function openWin6(){
+                              window.open("https://www.youtube.com/watch?v=XfQYHqsiN5g","_blank","top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                            }
+                          </script><br>
+                        <br>
+                        <button class="btn_i b4_i">▶Play</button>
+
+                    </div>
+                      <div class="flim">
+                          <b>American History X</b>
+                          <br>
+                          IMDb - 8.5
+                      </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-------------------------------Footer-------------------------------->
+    <div id="waterdrop"></div>
+    <footer class="footer">
+      <hr class="footer-hr">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="home.html"><img class="footer-logo" src="Images/TheaterLogo-removebg-preview.png" alt="" width="30" height="24"></a>
+                <p class="footer-bottom-tagline">Watch! Chill! Repeat!</p>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Follow Us</h2>
+                <ul class="footer-middle-list icons">
+                    <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f facebook" style="color:red"></i></a>
+                    <a class="footer-links" href="https://twitter.com/login?lang=en" target="_blank"><i class="fab fa-twitter twitter" style="color:red"></i></a>
+                    <a class="footer-links" href="https://www.linkedin.com/login" target="_blank"><i class="fab fa-linkedin linkedin" style="color:red"></i></a>
+                    <a class="footer-links" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram instagram" style="color:red"></i></a>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Services</h2>
+                <ul class="footer-middle-list">
+                    <li class="footer-middle-list-item"><a href="home.html">Enjoy Latest Movies</a> </li>
+                    <li class="footer-middle-list-item"><a href="premium.html">Get Premium Subscription</a> </li>
+                    <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Try Our App</h2>
+                <ul class="footer-middle-list icons">
+                    <a class="footer-links" href="#"><i class="fab fa-google-play" style="color:red"></i></a>
+                    <a class="footer-links" href="#"><i class="fab fa-app-store-ios" style="color:red"></i></a>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <p class="footer-links">
+                    <h2 class="footer-heading">Contact Us</h2>
+                    <p class="footer-bottom-tagline">Feel free to contact us.</p>
+                    <a class="footer-contact-button" href="contactus.html">Contact</a>
+                </p>
+            </div>
+        </div>
+        <hr class="footer-hr">
+        <div class="footer-copyright">
+            <p>Copyright &copy; and &reg; Since
+                <script>
+                    document.write(new Date().getFullYear())
+                </script> Under CinemaElysium.com </p>
+        </div>
+    </footer>
+
+    <!-----------------scroll back to top button-->
+    <button  id="scrollToTopButton" title="Go to top" class="ml-5" >
+        <i class="fa fa-angle-double-up" aria-hidden="true" ></i>
+      </button>
+      <script>
+      $(document).ready(function(){
+        var scrollTopButton = document.getElementById("scrollToTopButton");
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          scrollTopButton.style.display = "block";
+        } else {
+          scrollTopButton.style.display = "none";
+        }
+      }
+
+      $("#scrollToTopButton").click(function(){
+      $('html ,body').animate({scrollTop : 0},800)
+      });
+      });
+      </script>
+
+    <!-- offcanva JS and footer js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+        jQuery('#waterdrop').raindrops({
+            color: '#292c2f',
+            canvasHeight: 150,
+            density: 0.1,
+            frequency: 20
+        });
+    </script>
+  <script>
+    function logout(){
+      window.location.replace("login.html");
+    }
+  </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>
